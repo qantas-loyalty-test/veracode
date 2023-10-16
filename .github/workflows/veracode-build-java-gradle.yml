@@ -29,14 +29,14 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew assembleDebug
       
-    - name: Identify the Artifact
-      id: identify
-      run: |
-        ls -lha .
-        ls -lha app/build
-        ls -lha app/build/outputs
-        ls -lha app/build/outputs/apk
-        ls -lha app/build/outputs/apk/debug
+    # - name: Identify the Artifact
+    #   id: identify
+    #   run: |
+    #     ls -lha .
+    #     ls -lha app/build
+    #     ls -lha app/build/outputs
+    #     ls -lha app/build/outputs/apk
+    #     ls -lha app/build/outputs/apk/debug
         
     #     jar_files=$(find build -name "*.jar" -type f -maxdepth 2 -not -name '*plain*')
     #     war_files=$(find build -name "*.war" -type f -maxdepth 2 -not -name '*plain*')
@@ -53,7 +53,7 @@ jobs:
     #     echo $artifact_file
     #     echo "veracode_artifact=$artifact_file" >> $GITHUB_ENV
         
-    # - uses: actions/upload-artifact@v3
-    #   with:
-    #     name: veracode-artifact
-    #     path: ${{ env.veracode_artifact }}
+    - uses: actions/upload-artifact@v3
+      with:
+        name: veracode-artifact
+        path: app/build/outputs/apk/debug
