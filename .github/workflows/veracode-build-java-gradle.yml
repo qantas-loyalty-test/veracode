@@ -34,6 +34,8 @@ jobs:
       run: |
         ls -lha .
         ls -lha app/build
+        ls -lha app/build/outpts
+        ls -lha app/build/outpts/debug
         
     #     jar_files=$(find build -name "*.jar" -type f -maxdepth 2 -not -name '*plain*')
     #     war_files=$(find build -name "*.war" -type f -maxdepth 2 -not -name '*plain*')
