@@ -36,6 +36,7 @@ jobs:
         ls -lha app/build
         ls -lha app/build/outputs
         ls -lha app/build/outputs/apk
+        ls -lha app/build/outputs/apk/debug
         
     #     jar_files=$(find build -name "*.jar" -type f -maxdepth 2 -not -name '*plain*')
     #     war_files=$(find build -name "*.war" -type f -maxdepth 2 -not -name '*plain*')
