@@ -34,6 +34,7 @@ jobs:
       run: |
         ls -lha .
         ls -lha build
+        ll -lha build/kotlin
     #     jar_files=$(find build -name "*.jar" -type f -maxdepth 2 -not -name '*plain*')
     #     war_files=$(find build -name "*.war" -type f -maxdepth 2 -not -name '*plain*')
     #     ear_files=$(find build -name "*.ear" -type f -maxdepth 2 -not -name '*plain*')
